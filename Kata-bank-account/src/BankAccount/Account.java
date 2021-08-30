@@ -1,6 +1,4 @@
 package BankAccount;
-
-
 public class Account {	
 
 		// 	Account balance
