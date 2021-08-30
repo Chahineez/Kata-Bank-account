@@ -1,0 +1,35 @@
+package BankAccount;
+import java.util.ArrayList;
+
+public class Statement {
+    private ArrayList <Operation> operations;
+	
+	// Constructor 
+	public Statement(){
+		ArrayList<Operation> operations= new ArrayList<Operation> ();
+	}
+	
+	
+	// Save the new operation 
+	public void saveOperation(Operation newOperation){
+		operations.add(newOperation); // add the new operation to the array
+	}
+	
+	
+	/** 
+	 *  un string qui servira pour l'affichage de l'operations.
+	 * 
+	 */
+	public String printStatement(){
+		
+		String statement=new String();
+		
+		for(int i=0;i<operations.size();i++)
+		{
+			statement+=operations.get(i).printOperation();
+			statement+="\n";
+		}
+		return statement;
+	}
+	
+}

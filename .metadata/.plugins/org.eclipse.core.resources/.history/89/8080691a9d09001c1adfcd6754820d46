@@ -1,0 +1,80 @@
+package BankAccount;
+
+
+public class Account {	
+
+		// 	Account balance
+			private double balance;
+		
+		// 	The minimum possible balance
+			private double min;
+					
+		//	Account statement
+			private Statement statement;
+						
+			
+		// Account constructor	
+			public Account(){
+				
+				statement = new Statement();
+				balance = 0;
+				
+			//  The minimum possible balance. it depends on the bank
+				this.min = -100;
+			}
+			
+			public Account(double balance,double min){
+				this();
+				this.balance=balance;
+				this.min=min;
+			}
+			
+//	 		Pour faire un retrait
+			
+				public void withdrawal(double amount){
+					
+					// test si le retrait est autorisé
+					if((balance-amount)>= minBalance){
+						Operation operation=new Operation("WITHDRAWAL",amount);
+						statement.addOperation(operation);
+						balance-=amount;
+						System.out.println("Operation reussie");
+					}
+					else
+						System.out.println("impossible de retirer");
+				}
+				
+			//	 	 Pour faire un depot
+				
+				public void deposit(double amount){
+						
+				
+						Operation operation=new Operation("DEPOSIT   ",amount);
+						statement.addOperation(operation);
+						balance+=amount;
+						System.out.println("Operation reussie");
+					
+				}
+				
+			// 		Pour afficher le releve du compte.
+				
+				public void  print(){
+					System.out.println("Voici votre releve: ");
+					System.out.println("-------=======---------");	
+					System.out.println("OPERATION    MONTANT    DATE ");
+					System.out.println("----------------------------");	
+					System.out.println(statement.print());
+					System.out.println("SOLDE:   "+balance);
+					System.out.println("ABIENTOT");
+				}
+			
+				/**
+				 * @return the balance
+				 */
+				public double getBalance() {
+					return balance;
+				}
+				 
+
+			
+}

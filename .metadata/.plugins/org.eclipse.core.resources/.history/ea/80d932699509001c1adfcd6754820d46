@@ -1,0 +1,32 @@
+package BankAccount;
+
+public class Account {
+
+// 	Solde du compte
+			private double balance;
+			
+		// 	Le relevé du compte
+			private Statement statement;
+			
+		// 	le solde minimal qu'on peut avoir sur un compte
+			private double minBalance;
+			
+		//  le solde maximal qu'on peut avoir sur un compte
+		//	private double maxBalance;
+			
+		/*	Les constructeurs	*/
+			
+			public Account(){
+				statement=new Statement();
+				balance=0;
+				
+				//  les montants limites du compte sont définits arbitrairement.
+		
+				this.minBalance=-100;
+			}
+			public Account(double balance,double minBalance){
+				this();
+				this.balance=balance;
+				this.minBalance=minBalance;
+			}
+}

@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+C:\Users\fc_sl\OneDrive\Desktop\kata-bank-account\.metadata\.plugins\org.eclipse.jdt.core
+2292141306.index
+1066099540.index

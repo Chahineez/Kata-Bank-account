@@ -1,0 +1,59 @@
+package BankAccount;
+
+/**
+ * @author Chahinez Slatnia
+ *
+ */
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		// create account for the user
+		Account myAccount=new Account();
+		
+		// ask for operations 
+		System.out.println("Please choose an operation by writing its number : \n "
+				+ "1/ See my balance\n"
+				+ " 2/ Deposit an amount\n"
+				+ " 3/ Withdraw an amount\n"
+				+ " 4/ Print my statement\n");
+       
+		
+		
+		Scanner s = new Scanner(System.in);
+        // Read the value
+        int numChoice = s.nextInt();
+		System.out.println("ok "+ numChoice);
+        // Make operation according to numChoice
+        switch (numChoice) {
+        
+        case 1: // See my balance
+        	System.out.println("Votre solde : "+ myAccount.getBalance());
+        	break;
+        	
+        case 2: // Deposit an amount
+        	System.out.println("Please enter the amount");
+        //	Scanner sc = new Scanner(System.in);
+            double amount1 = s.nextDouble();
+            myAccount.deposit(amount1);
+            break;
+            
+        case 3: //Withdraw an amount
+        	System.out.println("Please enter the amount");
+                double amount2 = s.nextDouble();
+                myAccount.withdrawal(amount2);
+                break;
+        	
+        case 4: //Print the statement
+        	myAccount.print();
+        	break;
+        }        
+				
+
+	}
+
+}

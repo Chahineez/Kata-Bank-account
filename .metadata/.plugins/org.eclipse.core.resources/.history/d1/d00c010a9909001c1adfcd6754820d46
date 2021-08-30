@@ -1,0 +1,44 @@
+package BankAccount;
+
+/**
+ * @author Chahinez Slatnia
+ *
+ */
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		// create account for the user
+		Account myAccount=new Account();
+		
+		// ask for operations 
+		System.out.println("Please choose an operation by writing its number\n "
+				+ " 1/ See my balance\n"
+				+ " 2/ Deposit an amount\n"
+				+ " 3/ Withdraw an amount\n"
+				+ " 4/ Print my statement\n");
+		
+		// Dépot de 10 
+		user1.deposit(10);
+		System.out.println("votre solde: "+user1.getBalance());
+
+		
+		// Retrait  de 200
+		user1.withdrawal(200);
+		// retrait de 20
+		user1.withdrawal(20);
+		// depot de 100
+		user1.deposit(100);
+		// retrait de 20
+		user1.withdrawal(20);
+		// depot de 10
+		user1.deposit(10);
+	
+		// statement
+		user1.print();
+
+	}
+
+}
